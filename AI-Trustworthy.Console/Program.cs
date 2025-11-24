@@ -62,7 +62,7 @@ class Program
         text = string.Join("\n\n---\n\n", structuredSections);
 
         // --- Input Quality Check ---
-        bool IsInputSuitable(out string qualityWarning)
+        bool IsInputSuitable(out string? qualityWarning)
         {
             qualityWarning = null;
 
@@ -410,7 +410,7 @@ class Program
         return string.Join("\n", paragraphs);
     }
 
-    static string BuildHtmlPage(string title, string bodyHtml, Dictionary<string, string> meta = null)
+    static string BuildHtmlPage(string title, string bodyHtml, Dictionary<string, string>? meta = null)
     {
         var metaHtml = "";
         if (meta != null)
